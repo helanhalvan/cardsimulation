@@ -50,7 +50,7 @@ simulate(A,N)->
 simulate(_,0,Done)->Done;
 simulate(Deck,N,Done)->
     H=sum(Deck),
-    C=random:uniform(H),
+    C=rand:uniform(H),
     {Card,D2}=draw(C,Deck),
     simulate(D2,N-1,[Card|Done]).
 
